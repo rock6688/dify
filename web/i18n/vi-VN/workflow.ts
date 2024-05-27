@@ -49,6 +49,17 @@ const translation = {
     processData: 'Xử lý dữ liệu',
     input: 'Nhập',
     output: 'Đầu ra',
+    jinjaEditorPlaceholder: 'Nhập \'/\' hoặc \'{\' để chèn biến',
+    viewOnly: 'Chỉ Xem',
+    showRunHistory: 'Hiển Thị Lịch Sử Chạy',
+    enableJinja: 'Kích Hoạt Hỗ Trợ Mẫu Jinja',
+    learnMore: 'Tìm Hiểu Thêm',
+    copy: 'Sao Chép',
+    duplicate: 'Nhân Bản',
+    addBlock: 'Thêm Khối',
+    pasteHere: 'Dán Vào Đây',
+    pointerMode: 'Chế Độ Con Trỏ',
+    handMode: 'Chế Độ Tay',
   },
   errorMsg: {
     fieldRequired: '{{field}} là bắt buộc',
@@ -204,6 +215,7 @@ const translation = {
       singleRun: {
         variable: 'Biến',
       },
+      sysQueryInUser: 'sys.query được yêu cầu trong tin nhắn người dùng.',
     },
     knowledgeRetrieval: {
       queryVariable: 'Biến Truy vấn',
@@ -248,10 +260,23 @@ const translation = {
         'header': 'Tiêu đề',
       },
       insertVarPlaceholder: 'nhập \'/\' để chèn biến',
+      timeout: {
+        title: 'Hết thời gian',
+        connectLabel: 'Hết thời gian kết nối',
+        connectPlaceholder: 'Nhập thời gian kết nối bằng giây',
+        readLabel: 'Hết thời gian đọc',
+        readPlaceholder: 'Nhập thời gian đọc bằng giây',
+        writeLabel: 'Hết thời gian ghi',
+        writePlaceholder: 'Nhập thời gian ghi bằng giây',
+      },
     },
     code: {
       inputVars: 'Biến đầu vào',
       outputVars: 'Biến đầu ra',
+      advancedDependencies: 'Phụ thuộc Nâng cao',
+      advancedDependenciesTip: 'Thêm một số phụ thuộc đã được tải sẵn cần nhiều thời gian hơn để sử dụng hoặc không được tích hợp sẵn tại đây',
+      searchDependencies: 'Tìm Kiếm Phụ Thuộc',
+
     },
     templateTransform: {
       inputVars: 'Biến đầu vào',
@@ -318,6 +343,9 @@ const translation = {
     questionClassifiers: {
       model: 'mô hình',
       inputVars: 'Biến đầu vào',
+      outputVars: {
+        className: 'Tên phân loại',
+      },
       class: 'Lớp',
       classNamePlaceholder: 'Viết tên lớp của bạn',
       advancedSetting: 'Cài đặt Nâng cao',

@@ -49,6 +49,17 @@ const translation = {
     processData: 'Traiter les données',
     input: 'Entrée',
     output: 'Sortie',
+    jinjaEditorPlaceholder: 'Tapez \'/\' ou \'{\' pour insérer une variable',
+    viewOnly: 'Vue Seulement',
+    showRunHistory: 'Afficher l\'Historique des Exécutions',
+    enableJinja: 'Activer le support des modèles Jinja',
+    learnMore: 'En Savoir Plus',
+    copy: 'Copier',
+    duplicate: 'Dupliquer',
+    addBlock: 'Ajouter un Bloc',
+    pasteHere: 'Coller Ici',
+    pointerMode: 'Mode Pointeur',
+    handMode: 'Mode Main',
   },
   errorMsg: {
     fieldRequired: '{{field}} est requis',
@@ -204,6 +215,7 @@ const translation = {
       singleRun: {
         variable: 'Variable',
       },
+      sysQueryInUser: 'sys.query dans l\'entrée utilisateur',
     },
     knowledgeRetrieval: {
       queryVariable: 'Variable de requête',
@@ -248,10 +260,22 @@ const translation = {
         'header': 'En-tête',
       },
       insertVarPlaceholder: 'tapez \'/\' pour insérer une variable',
+      timeout: {
+        title: 'Délai d\'expiration',
+        connectLabel: 'Délai de connexion',
+        connectPlaceholder: 'Entrez le délai de connexion en secondes',
+        readLabel: 'Délai de lecture',
+        readPlaceholder: 'Entrez le délai de lecture en secondes',
+        writeLabel: 'Délai d\'écriture',
+        writePlaceholder: 'Entrez le délai d\'écriture en secondes',
+      },
     },
     code: {
       inputVars: 'Variables d\'entrée',
       outputVars: 'Variables de sortie',
+      advancedDependencies: 'Dépendances Avancées',
+      advancedDependenciesTip: 'Ajoutez ici des dépendances préchargées qui prennent plus de temps à consommer ou qui ne sont pas intégrées par défaut',
+      searchDependencies: 'Rechercher des Dépendances',
     },
     templateTransform: {
       inputVars: 'Variables d\'entrée',
@@ -318,6 +342,9 @@ const translation = {
     questionClassifiers: {
       model: 'modèle',
       inputVars: 'Variables d\'entrée',
+      outputVars: {
+        className: 'Nom de la classe',
+      },
       class: 'Classe',
       classNamePlaceholder: 'Écrivez votre nom de classe',
       advancedSetting: 'Paramètre avancé',

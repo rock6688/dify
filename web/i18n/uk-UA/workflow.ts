@@ -49,6 +49,17 @@ const translation = {
     processData: 'Обробка даних',
     input: 'Вхід',
     output: 'Вихід',
+    jinjaEditorPlaceholder: 'Введіть \'/\' або \'{\' щоб вставити змінну',
+    viewOnly: 'Тільки перегляд',
+    showRunHistory: 'Показати історію запусків',
+    enableJinja: 'Увімкнути підтримку шаблонів Jinja',
+    learnMore: 'Дізнатися більше',
+    copy: 'Копіювати',
+    duplicate: 'Дублювати',
+    addBlock: 'Додати блок',
+    pasteHere: 'Вставити тут',
+    pointerMode: 'Режим вказівника',
+    handMode: 'Режим руки',
   },
   errorMsg: {
     fieldRequired: '{{field}} є обов\'язковим',
@@ -204,6 +215,7 @@ const translation = {
       singleRun: {
         variable: 'Змінна',
       },
+      sysQueryInUser: 'sys.query потрібно в повідомленні користувача.',
     },
     knowledgeRetrieval: {
       queryVariable: 'Запит змінної',
@@ -248,10 +260,22 @@ const translation = {
         'header': 'Заголовок',
       },
       insertVarPlaceholder: 'наберіть \'/\' для вставки змінної',
+      timeout: {
+        title: 'Час вичерпано',
+        connectLabel: 'Тайм-аут з’єднання',
+        connectPlaceholder: 'Введіть час тайм-ауту з’єднання у секундах',
+        readLabel: 'Тайм-аут читання',
+        readPlaceholder: 'Введіть час тайм-ауту читання у секундах',
+        writeLabel: 'Тайм-аут запису',
+        writePlaceholder: 'Введіть час тайм-ауту запису у секундах',
+      },
     },
     code: {
       inputVars: 'Вхідні змінні',
       outputVars: 'Вихідні змінні',
+      advancedDependencies: 'Розширені залежності',
+      advancedDependenciesTip: 'Додайте деякі попередньо завантажені залежності, які потребують більше часу для використання або не є вбудованими за замовчуванням',
+      searchDependencies: 'Шукати залежності',
     },
     templateTransform: {
       inputVars: 'Вхідні змінні',
@@ -318,6 +342,9 @@ const translation = {
     questionClassifiers: {
       model: 'модель',
       inputVars: 'Вхідні змінні',
+      outputVars: {
+        className: 'Назва класу',
+      },
       class: 'Клас',
       classNamePlaceholder: 'Напишіть назву вашого класу',
       advancedSetting: 'Розширена настройка',

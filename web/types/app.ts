@@ -1,6 +1,8 @@
 import type { AnnotationReplyConfig, ChatPromptConfig, CompletionPromptConfig, DatasetConfigs, PromptMode } from '@/models/debug'
 import type { CollectionType } from '@/app/components/tools/types'
 import type { LanguagesSupported } from '@/i18n/language'
+import type { Tag } from '@/app/components/base/tag-management/constant'
+
 export enum ProviderType {
   openai = 'openai',
   anthropic = 'anthropic',
@@ -267,6 +269,8 @@ export type SiteConfig = {
   copyright: string
   /** Privacy Policy */
   privacy_policy: string
+  /** Custom Disclaimer */
+  custom_disclaimer: string
 
   icon: string
   icon_background: string
@@ -309,6 +313,7 @@ export type App = {
   site: SiteConfig
   /** api site url */
   api_base_url: string
+  tags: Tag[]
 }
 
 /**

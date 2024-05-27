@@ -39,7 +39,7 @@ class ToolNode(BaseNode):
         parameters = self._generate_parameters(variable_pool, node_data)
         # get tool runtime
         try:
-            tool_runtime = ToolManager.get_workflow_tool_runtime(self.tenant_id, node_data)
+            tool_runtime = ToolManager.get_workflow_tool_runtime(self.tenant_id, self.app_id, self.node_id, node_data)
         except Exception as e:
             return NodeRunResult(
                 status=WorkflowNodeExecutionStatus.FAILED,
@@ -173,11 +173,12 @@ class ToolNode(BaseNode):
         """
         Extract tool response text
         """
-        return ''.join([
-            f'{message.message}\n' if message.type == ToolInvokeMessage.MessageType.TEXT else
-            f'Link: {message.message}\n' if message.type == ToolInvokeMessage.MessageType.LINK else ''
+        return '\n'.join([
+            f'{message.message}' if message.type == ToolInvokeMessage.MessageType.TEXT else
+            f'Link: {message.message}' if message.type == ToolInvokeMessage.MessageType.LINK else ''
             for message in tool_response
         ])
+    
 
     @classmethod
     def _extract_variable_selector_to_variable_mapping(cls, node_data: ToolNodeData) -> dict[str, list[str]]:
