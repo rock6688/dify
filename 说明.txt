@@ -1,0 +1,54 @@
+ucloud，dify：--------------
+25804453@qq.com
+密码
+http://117.50.175.21/signin
+test@qq.com
+test123456
+
+svn服务器，dify：------------
+超级管理员：
+http://10.22.0.226/
+a12345678@qq.com
+a12345678
+
+
+docker编译、上传镜像库、下载、运行---------
+我的docker hub库：chenhf0421
+docker login
+账户 chenhf0421
+密码 xxxxx
+进入dify根目录，它有makefile文件
+修改里面的 DOCKER_REGISTRY，VERSION
+make build-push-all
+进入dify/docker目录，修改 docker-compose.yaml
+api节的 DOCKER_REGISTRY，VERSION
+worker节的 DOCKER_REGISTRY，VERSION
+web节的 DOCKER_REGISTRY，VERSION
+
+连数据库----------
+端口5432 通过yml文件配置把port映射出来
+
+安装node、npm---------
+1.node.js的完全卸载
+第一步：打开系统自带的应用管理器 卸载ndoe.js。
+第二步：删除和node.js相关的文件夹。比如C:\Users\AppData\Roaming\npm文件夹
+第三步: 删除C:\Users\AppData目录下与node.js有关的文件，比如.npmc。
+第四步：删除环境变量中与node.js有关的路径配置
+第五部：cmd中输入 where node检查是否删除
+2.node.js的安装
+第一步：去官网下载想要安装的ndoe.js的版本https://nodejs.org/zh-cn/download/
+第二步：点击下载好的msi格式安装包，然后一路next到低。
+第三步：cmd 依次输入 node -v和 nmp -v查看是否安装成功
+3.配置
+例如安装目录d:\nodejs
+安装后的path环境变量应该有：
+C:\Users\lenovo\AppData\Roaming\npm
+D:\nodejs\
+删除这个文件夹并重新创建它C:\Users\lenovo\AppData\Roaming\npm
+把d:\nodejs里的全部内容拷贝到C:\Users\lenovo\AppData\Roaming\npm
+设置npm源
+npm get registry
+npm config set registry http://registry.npm.taobao.org/
+列出npm所有配置项
+npm config ls -l
+已管理员启动cmd或git bash，避免权限问题
