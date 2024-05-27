@@ -52,3 +52,11 @@ npm config set registry http://registry.npm.taobao.org/
 列出npm所有配置项
 npm config ls -l
 已管理员启动cmd或git bash，避免权限问题
+
+github 版本更新、合并分支------------
+所有修改在本地的v068分支上做；
+commit 本地保存，push到github的v068分支；
+本地checkout main分支，则导致本地ide的当前活动分支自动设置为main分支，把本地的v068分支merge到本地main分支，再push到github的main分支；
+如果官方dify升级到v069，则把官方的同步更新到我的github的main分支上；
+按上述步骤把我的各种修改merge到我的github的main分支上；
+在我的github的main分支上创建我的github的分支v069，迭代上面的操作，则我的各种修改与官方版本更新保持一致。
