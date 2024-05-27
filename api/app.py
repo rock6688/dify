@@ -50,7 +50,7 @@ from services.account_service import AccountService
 
 warnings.simplefilter("ignore", ResourceWarning)
 
-#根据操作系统进行判断1
+#根据操作系统进行判断2
 # fix windows platform
 if os.name == "nt":
     os.system('tzutil /s "UTC"')
