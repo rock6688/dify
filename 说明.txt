@@ -60,3 +60,10 @@ commit 本地保存，push到github的v068分支；
 如果官方dify升级到v069，则把官方的同步更新到我的github的main分支上；
 按上述步骤把我的各种修改merge到我的github的main分支上；
 在我的github的main分支上创建我的github的分支v069，迭代上面的操作，则我的各种修改与官方版本更新保持一致。
+参考：
+pycharm怎么同步更新GitHub库
+https://worktile.com/kb/ask/517261.html
+git使用教程6-pycharm新建git分支并推送远程仓库
+https://www.cnblogs.com/yoyoketang/p/12431940.html
+git使用教程7-pycharm 使用 git merge 合并分支
+https://www.cnblogs.com/yoyoketang/p/12459826.html
