@@ -22,4 +22,5 @@ def hash_password(password_str, salt_byte):
 
 def compare_password(password_str, password_hashed_base64, salt_base64):
     # compare password for login
+    # 明文密码+盐进行hash得到密文密码，用户即使看到密文密码和盐也无法正常登录，因为逆向得不到明文密码
     return hash_password(password_str, base64.b64decode(salt_base64)) == base64.b64decode(password_hashed_base64)

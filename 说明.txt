@@ -1,7 +1,7 @@
 ucloud，dify：--------------
 25804453@qq.com
 密码
-http://117.50.175.21/signin
+http://117.50.175.21
 test@qq.com
 test123456
 
