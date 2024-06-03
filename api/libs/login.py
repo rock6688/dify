@@ -10,11 +10,23 @@ from werkzeug.local import LocalProxy
 from extensions.ext_database import db
 from models.account import Account, Tenant, TenantAccountJoin
 
+# 该文件主要用于定义用户登录所需的装饰器和辅助函数，确保用户在访问某些视图时已经登录和认证。
+
 #: A proxy for the current user. If no user is logged in, this will be an
 #: anonymous user
 current_user = LocalProxy(lambda: _get_user())
 
 
+'''
+这是一个装饰器，用于确保当前用户在访问某个视图函数时已经登录和认证。如果用户未登录，则调用 LoginManager.unauthorized 回调函数。
+参数: func - 需要装饰的视图函数。
+功能:
+检查请求头中的 Authorization 头是否包含有效的 API 密钥（如果启用了 ADMIN_API_KEY_ENABLE）。
+如果启用了 API 密钥认证，并且提供了有效的 API 密钥，则模拟管理员登录。
+如果请求方法在 EXEMPT_METHODS 中，或者配置中 LOGIN_DISABLED 为 True，则跳过登录检查。
+如果用户未登录，则调用 unauthorized 回调函数。
+兼容 Flask 1.x 和 2.x 的同步调用。
+'''
 def login_required(func):
     """
     If you decorate a view with this, it will ensure that the current user is
@@ -94,6 +106,12 @@ def login_required(func):
     return decorated_view
 
 
+'''
+这是一个辅助函数，用于获取当前登录的用户。
+功能:
+如果有请求上下文，且全局对象 g 中没有 _login_user，则通过 login_manager 加载用户。
+返回当前登录的用户对象。
+'''
 def _get_user():
     if has_request_context():
         if "_login_user" not in g:

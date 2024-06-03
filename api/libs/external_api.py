@@ -9,6 +9,7 @@ from werkzeug.exceptions import HTTPException
 
 class ExternalApi(Api):
 
+    # 主要作用是将引发的异常转换为适当的 Flask 响应
     def handle_error(self, e):
         """Error handler for the API transforms a raised exception into a Flask
         response, with the appropriate HTTP status code and body.

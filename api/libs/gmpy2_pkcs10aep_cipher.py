@@ -30,6 +30,7 @@ from Crypto.Util.number import bytes_to_long, ceil_div, long_to_bytes
 from Crypto.Util.py3compat import _copy_bytes, bord
 from Crypto.Util.strxor import strxor
 
+# 这个文件实现了基于PKCS#1 v1.5 OAEP（Optimal Asymmetric Encryption Padding）的加密和解密功能。
 
 class PKCS1OAEP_Cipher:
     """Cipher object for PKCS#1 v1.5 OAEP.

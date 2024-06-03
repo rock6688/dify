@@ -14,6 +14,29 @@ from services.account_service import AccountService, RegisterService, TenantServ
 
 from .. import api
 
+'''
+我想知道这个文件是干什么用的，每个函数的功能是怎样的
+
+这个文件 controllers/console/auth/oauth.py 主要处理 OAuth 登录和回调的相关逻辑。以下是每个函数和类的功能：
+1. get_oauth_providers 函数:
+该函数在 Flask 应用的上下文中创建并返回一个包含 GitHub 和 Google OAuth 提供者的字典。
+2. OAuthLogin 类:
+这是一个 Flask-RESTful 资源类，处理 OAuth 登录请求。
+get 方法根据提供者（provider）获取相应的 OAuth 提供者，并生成授权 URL，然后重定向用户到该 URL 进行 OAuth 授权。
+3. OAuthCallback 类:
+这是另一个 Flask-RESTful 资源类，处理 OAuth 授权后的回调请求。
+get 方法处理 OAuth 回调，获取授权码，交换访问令牌，获取用户信息，并根据用户信息生成或更新账户，最后重定向用户到应用的主页面。
+4. _get_account_by_openid_or_email 函数:
+根据提供者和用户信息中的 OpenID 或邮箱查找账户。
+5. _generate_account 函数:
+根据提供者和用户信息生成或更新账户。
+如果账户不存在，则创建新账户，并设置用户的界面语言。
+将账户与 OAuth 提供者进行关联。
+6. API 路由:
+api.add_resource(OAuthLogin, '/oauth/login/<provider>')：为 OAuth 登录添加路由。
+api.add_resource(OAuthCallback, '/oauth/authorize/<provider>')：为 OAuth 回调添加路由。
+这个文件的主要目的是处理 OAuth 登录流程，包括重定向到 OAuth 提供者进行授权、处理授权回调、获取用户信息、生成或更新用户账户，并最终将用户重定向回应用的主页面。
+'''
 
 def get_oauth_providers():
     with current_app.app_context():
